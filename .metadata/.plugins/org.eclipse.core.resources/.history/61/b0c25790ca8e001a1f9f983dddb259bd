@@ -1,0 +1,75 @@
+package com.user.servlet;
+
+import java.io.IOException;
+import java.util.Map;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.user.model.User;
+
+/**
+ * Servlet implementation class userAPI
+ */
+@WebServlet("/userAPI")
+public class userAPI extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+	
+	User users = new User();
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public userAPI() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+    protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+  		// TODO Auto-generated method stub
+      	Map paras = getParasMap(request);
+
+  		String output = users.updateUser(paras.get("userIdSave").toString(), 
+  				paras.get("userId").toString(),
+  				paras.get("firstName").toString(), 
+  				paras.get("lastName").toString(),
+  				paras.get("userAddress").toString(),
+  				paras.get("contactNumber").toString(),
+  				paras.get("userDOB").toString(),
+  				paras.get("userAge").toString(),
+  				paras.get("userEmail").toString());
+
+  		response.getWriter().write(output);
+  	}
+    
+    protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+  		// TODO Auto-generated method stub
+      	Map paras = getParasMap(request); 
+  		 
+  		 String output = users.calcUsers(paras.get("userId").toString()); 
+  		 
+  		 response.getWriter().write(output);
+  	}
+      
+    
+    
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

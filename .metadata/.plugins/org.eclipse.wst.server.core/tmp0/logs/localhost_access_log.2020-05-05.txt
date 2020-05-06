@@ -1,0 +1,9 @@
+127.0.0.1 - - [05/May/2020:16:06:15 +0530] "GET / HTTP/1.1" 404 709
+0:0:0:0:0:0:0:1 - - [05/May/2020:16:06:45 +0530] "GET /Patients/index.jsp HTTP/1.1" 200 2799
+0:0:0:0:0:0:0:1 - - [05/May/2020:16:06:45 +0530] "GET /Patients/Views/bootstrap.min.css HTTP/1.1" 404 749
+0:0:0:0:0:0:0:1 - - [05/May/2020:16:06:45 +0530] "GET /Patients/Components/jquery-3.2.1.min.js HTTP/1.1" 404 756
+0:0:0:0:0:0:0:1 - - [05/May/2020:16:06:45 +0530] "GET /Patients/Components/appo.js HTTP/1.1" 404 744
+0:0:0:0:0:0:0:1 - - [05/May/2020:16:19:52 +0530] "GET /Patients/index.jsp HTTP/1.1" 200 3264
+0:0:0:0:0:0:0:1 - - [05/May/2020:16:19:52 +0530] "GET /Patients/Views/bootstrap.min.css HTTP/1.1" 404 749
+0:0:0:0:0:0:0:1 - - [05/May/2020:16:19:52 +0530] "GET /Patients/Components/jquery-3.2.1.min.js HTTP/1.1" 404 756
+0:0:0:0:0:0:0:1 - - [05/May/2020:16:19:52 +0530] "GET /Patients/Components/appo.js HTTP/1.1" 404 744

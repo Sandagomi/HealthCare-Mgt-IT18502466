@@ -1,0 +1,104 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<%@ page import="com.user.controller.UserController"%>
+<%@ page import="com.user.utill.DBConnection"%>
+<%@ page import="com.user.model.User"%>
+<%@ page import="java.sql.*"%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<link rel="stylesheet" href="Views/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+	integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+	integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+	crossorigin="anonymous"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+	integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+	crossorigin="anonymous"></script>
+<script src="Components/jquery-3.2.1.min.js"></script>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+	crossorigin="anonymous">
+<script src="Components/appo.js"></script>
+
+</head>
+
+<body>
+
+	<h1>Users</h1>
+
+	<div class="container-fluid">
+		<form id="booingForm" name="booingForm" method="post"
+			action="index.jsp">
+			
+			<div class="form-group">
+				<label for="userId">User Id</label> <input type="number"
+					class="form-control" id="userId" name="userId" required="required">
+			</div>
+			
+			<div class="form-group">
+				<label for="firstName">First Name</label> <input type="text"
+					class="form-control" id="firstName" name="firstName" required="required">
+			</div>
+			
+			<div class="form-group">
+				<label for="lastName">Last Name</label> <input type="text"
+					class="form-control" id="lastName" name="lastName" required="required">
+			</div>
+			
+			<div class="form-group">
+				<label for="userAddress">User Address</label> <input type="text"
+					class="form-control" id="userAddress" name="userAddress" required="required">
+			</div>
+			
+			<div class="form-group">
+				<label for="contactNumber">Contact Number</label> <input type="number"
+					class="form-control" id="contactNumber" name="contactNumber" required="required">
+			</div>
+			
+			<div class="form-group">
+				<label for="userDOB">User DOB</label> <input type="date"
+					class="form-control" id="userDOB" name="userDOB" required="required">
+			</div>
+			
+			<div class="form-group">
+				<label for="userAge">User Age</label> <input type="number"
+					class="form-control" id="userAge" name="userAge" required="required">
+			</div>
+			
+			<div class="form-group">
+				<label for="userEmail">User Email</label> <input type="text"
+					class="form-control" id="userEmail" name="userEmail" required="required">
+			</div>
+			
+			
+			
+				<input class="btn btn-primary" type="button" name="bookingBtn"
+				id="addingBtn" value="Add Now"> <input type="hidden"
+				id="hidAppoIdSave" name="hidAppoIdSave" value="">
+				
+				<div id="alertSuccess" class="alert alert-success"></div>
+	            <div id="alertError" class="alert alert-danger"></div>
+
+	            <div class="container-fluid" id = "appoGrid">
+		<%
+			User users = new User();
+			/*out.print(users.readUser());*/
+		%>
+	</div>
+	<input type="hidden" id="hidAppoIdSave" name="hidAppoIdSave" value="">
+	</form>
+	</div>
+
+	
+</body>
+</html>
